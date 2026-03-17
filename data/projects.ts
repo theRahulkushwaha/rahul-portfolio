@@ -131,4 +131,4 @@ export const projects: Project[] = [
     live: "",
     readme: "https://github.com/theRahulkushwaha/AcciAlert#readme",
   },
-]as const ;
+] ;
