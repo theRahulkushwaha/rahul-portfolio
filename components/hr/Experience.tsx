@@ -7,7 +7,7 @@ import AnimatedCard from "../shared/AnimatedCard";
 
 export default function Experience() {
   return (
-    <section className="py-24 bg-slate-50" id="experience">
+    <section className="py-16 md:py-24 bg-slate-50" id="experience">
 
       <Container>
 
@@ -17,27 +17,27 @@ export default function Experience() {
         />
         <AnimatedCard>
 
-        <div className="space-y-8 mt-12">
+        <div className="space-y-6 md:space-y-8 mt-12">
 
           {experience.map((exp, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm"
+              className="bg-white border border-slate-200 rounded-xl p-5 md:p-6 shadow-sm"
             >
 
-              <div className="flex justify-between flex-wrap gap-2">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-2">
 
-                <h3 className="text-lg font-semibold">
+                <h3 className="text-base md:text-lg font-semibold">
                   {exp.role}
                 </h3>
 
-                <span className="text-sm text-slate-500">
+                <span className="text-sm text-slate-500 shrink-0">
                   {exp.duration}
                 </span>
 
               </div>
 
-              <p className="text-indigo-500 font-medium mt-1">
+              <p className="text-indigo-500 font-medium mt-1 text-sm md:text-base">
                 {exp.company}
               </p>
 

@@ -7,7 +7,7 @@ import AnimatedCard from "../shared/AnimatedCard";
 
 export default function Achievements() {
   return (
-    <section className="py-24" id="achievements">
+    <section className="py-16 md:py-24" id="achievements">
 
       <Container>
 
@@ -17,21 +17,21 @@ export default function Achievements() {
         />
         <AnimatedCard>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
 
           {achievements.map((item, index) => (
             <div
               key={index}
-              className="border border-slate-200 rounded-xl p-6 bg-white shadow-sm"
+              className="border border-slate-200 rounded-xl p-5 md:p-6 bg-white shadow-sm"
             >
 
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start gap-3">
 
-                <h3 className="font-semibold text-lg">
+                <h3 className="font-semibold text-base md:text-lg">
                   {item.title}
                 </h3>
 
-                <span className="text-sm text-slate-500">
+                <span className="text-sm text-slate-500 shrink-0">
                   {item.year}
                 </span>
 

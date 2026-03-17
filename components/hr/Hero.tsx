@@ -12,11 +12,11 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-16 pb-24">
+    <section id="hero" className="pt-10 pb-16 md:pt-16 md:pb-24">
 
       <Container>
 
-        <div className="flex flex-col md:flex-row items-center gap-16">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
 
           {/* LEFT CONTENT */}
           <motion.div
@@ -29,33 +29,33 @@ export default function Hero() {
               Hello, I'm
             </p>
 
-            <h1 className="text-5xl md:text-6xl font-bold mt-2">
+            <h1 className="text-4xl md:text-6xl font-bold mt-2">
               Rahul Kushwaha
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-indigo-500 mt-3">
+            <h2 className="text-lg md:text-2xl text-indigo-500 mt-3">
               React Native Developer
             </h2>
 
-            <p className="mt-6 text-slate-600 max-w-lg leading-relaxed mx-auto md:mx-0">
+            <p className="mt-4 text-slate-600 max-w-lg leading-relaxed mx-auto md:mx-0 text-sm md:text-base">
               I build scalable mobile applications using React Native and modern
               technologies. I enjoy exploring new tech and turning ideas into
               real products.
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+            <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-6 md:mt-8">
 
               <button
                 onClick={scrollToProjects}
-                className="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition"
+                className="px-5 py-2.5 md:px-6 md:py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition text-sm md:text-base"
               >
                 View Projects
               </button>
 
               <a
                 href="/resume/rahul-kushwaha-resume.pdf"
-                className="px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-100 transition"
+                className="px-5 py-2.5 md:px-6 md:py-3 border border-slate-300 rounded-lg hover:bg-slate-100 transition text-sm md:text-base"
               >
                 Download Resume
               </a>
@@ -66,7 +66,7 @@ export default function Hero() {
 
           {/* RIGHT IMAGE */}
           <motion.div
-            className="flex-1 flex justify-center md:justify-end"
+            className="flex justify-center md:flex-1 md:justify-end"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
           >
@@ -74,10 +74,10 @@ export default function Hero() {
             <Image
               src="/images/profile.png"
               alt="Rahul Kushwaha"
-              width={320}
-              height={320}
+              width={220}
+              height={220}
               priority
-              className="rounded-2xl shadow-lg border border-slate-200"
+              className="rounded-2xl shadow-lg border border-slate-200 md:w-80 md:h-80"
             />
 
           </motion.div>

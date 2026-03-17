@@ -36,6 +36,18 @@ export const projects: Project[] = [
     readme: "https://github.com/theRahulkushwaha/florynstayz/blob/main/README.md",
   },
   {
+    title: "CityZen 2.0",
+    description:
+      "AI-powered smart city dashboard for real-time monitoring and analytics.",
+    tech: ["React", "Flask", "Firebase", "AI"],
+    image: "/images/projects/cityzen.png",
+    type: "Personal",
+    status: "Completed",
+    github: "https://github.com/theRahulkushwaha/CityZen-2.0",
+    live: "",
+    readme: "https://github.com/theRahulkushwaha/CityZen-2.0#readme",
+  },
+  {
     title: "Ticket App",
     description:
       "Mobile ticket booking application with smooth UI and real-time booking features.",
@@ -47,18 +59,7 @@ export const projects: Project[] = [
     live: "",
     readme: "https://github.com/theRahulkushwaha/pixelwand-ticket-app#readme",
   },
-  {
-    title: "Chat Assignment App",
-    description:
-      "Chat-based assignment submission platform with messaging and task management features.",
-    tech: ["React Native", "Node.js"],
-    image: "/images/projects/chat.png",
-    type: "Personal",
-    status: "Completed",
-    github: "https://github.com/theRahulkushwaha/ChatAssignmentApp",
-    live: "",
-    readme: "https://github.com/theRahulkushwaha/ChatAssignmentApp#readme",
-  },
+  
   {
     title: "Yoga App",
     description:
@@ -72,18 +73,6 @@ export const projects: Project[] = [
     readme: "https://github.com/theRahulkushwaha/YogaApp#readme",
   },
   {
-    title: "CityZen 2.0",
-    description:
-      "AI-powered smart city dashboard for real-time monitoring and analytics.",
-    tech: ["React", "Flask", "Firebase", "AI"],
-    image: "/images/projects/cityzen.png",
-    type: "Personal",
-    status: "Completed",
-    github: "https://github.com/theRahulkushwaha/CityZen-2.0",
-    live: "",
-    readme: "https://github.com/theRahulkushwaha/CityZen-2.0#readme",
-  },
-  {
     title: "LegalMind",
     description:
       "Legal assistance platform leveraging AI for smart legal insights and guidance.",
@@ -94,6 +83,18 @@ export const projects: Project[] = [
     github: "https://github.com/theRahulkushwaha/LegalMind",
     live: "",
     readme: "https://github.com/theRahulkushwaha/LegalMind#readme",
+  },
+  {
+    title: "Chat Assignment App",
+    description:
+      "Chat-based assignment submission platform with messaging and task management features.",
+    tech: ["React Native", "Node.js"],
+    image: "/images/projects/chat.png",
+    type: "Personal",
+    status: "Completed",
+    github: "https://github.com/theRahulkushwaha/ChatAssignmentApp",
+    live: "",
+    readme: "https://github.com/theRahulkushwaha/ChatAssignmentApp#readme",
   },
   {
     title: "Chintu",
