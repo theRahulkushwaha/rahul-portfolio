@@ -1,32 +1,90 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import Container from "@/components/shared/Container";
 
 export default function Hero() {
+
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-center">
+    <section id="hero" className="pt-16 pb-24">
 
-      <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-5xl font-bold"
-      >
-        Rahul Kushwaha
-      </motion.h1>
+      <Container>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="mt-4 text-xl text-gray-400"
-      >
-        React & React Native Developer
-      </motion.p>
+        <div className="flex flex-col md:flex-row items-center gap-16">
 
-      <p className="mt-4 max-w-xl text-gray-500">
-        I build modern web and mobile applications and love exploring
-        new technologies.
-      </p>
+          {/* LEFT CONTENT */}
+          <motion.div
+            className="flex-1 text-center md:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+
+            <p className="text-slate-500 text-sm font-medium">
+              Hello, I'm
+            </p>
+
+            <h1 className="text-5xl md:text-6xl font-bold mt-2">
+              Rahul Kushwaha
+            </h1>
+
+            <h2 className="text-xl md:text-2xl text-indigo-500 mt-3">
+              React Native Developer
+            </h2>
+
+            <p className="mt-6 text-slate-600 max-w-lg leading-relaxed mx-auto md:mx-0">
+              I build scalable mobile applications using React Native and modern
+              technologies. I enjoy exploring new tech and turning ideas into
+              real products.
+            </p>
+
+            {/* BUTTONS */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+
+              <button
+                onClick={scrollToProjects}
+                className="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition"
+              >
+                View Projects
+              </button>
+
+              <a
+                href="/resume/rahul-kushwaha-resume.pdf"
+                className="px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-100 transition"
+              >
+                Download Resume
+              </a>
+
+            </div>
+
+          </motion.div>
+
+          {/* RIGHT IMAGE */}
+          <motion.div
+            className="flex-1 flex justify-center md:justify-end"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+
+            <Image
+              src="/images/profile.png"
+              alt="Rahul Kushwaha"
+              width={320}
+              height={320}
+              priority
+              className="rounded-2xl shadow-lg border border-slate-200"
+            />
+
+          </motion.div>
+
+        </div>
+
+      </Container>
 
     </section>
   );

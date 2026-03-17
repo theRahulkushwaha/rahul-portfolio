@@ -1,33 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import ModeToggle from "@/components/toggle/ModeToggle";
-
+import Navbar from "@/components/hr/Navbar";
 import Hero from "@/components/hr/Hero";
+import Skills from "@/components/hr/Skills";
 import Projects from "@/components/hr/Projects";
 import Experience from "@/components/hr/Experience";
-
 import Terminal from "@/components/dev/Terminal";
+import useMode from "@/hooks/useMode";
+import Achievements from "@/components/hr/Achievements";
+import Contact from "@/components/hr/Contact";
+import Resume from "@/components/hr/Resume";
 
 export default function Home() {
-  const [mode, setMode] = useState("hr");
+  const { devMode, setDevMode } = useMode();
 
   return (
-    <main className="min-h-screen">
+    <main>
 
-      <div className="p-6 flex justify-end">
-        <ModeToggle setMode={setMode} />
-      </div>
+      <Navbar devMode={devMode} setDevMode={setDevMode} />
 
-      {mode === "hr" ? (
+      {!devMode && (
         <>
           <Hero />
+          <Skills />
           <Projects />
           <Experience />
+          <Achievements />
+          <Resume />
+          <Contact />
         </>
-      ) : (
-        <Terminal />
       )}
+
+      {devMode && <Terminal />}
 
     </main>
   );

@@ -1,28 +1,68 @@
+"use client";
+
+import Container from "@/components/shared/Container";
+import SectionTitle from "@/components/shared/SectionTitle";
+import { experience } from "@/data/experience";
+import AnimatedCard from "../shared/AnimatedCard";
+
 export default function Experience() {
   return (
-    <section className="py-20 px-10">
+    <section className="py-24 bg-slate-50" id="experience">
 
-      <h2 className="text-3xl font-bold mb-6">Experience</h2>
+      <Container>
 
-      <div className="max-w-xl">
+        <SectionTitle
+          title="Experience"
+          subtitle="My professional experience and internships."
+        />
+        <AnimatedCard>
 
-        <h3 className="text-xl font-semibold">
-          Rico Auto Industries
-        </h3>
+        <div className="space-y-8 mt-12">
 
-        <p className="text-gray-400">
-          Summer Internship • June 2024 – July 2024
-        </p>
+          {experience.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm"
+            >
 
-        <ul className="list-disc ml-5 mt-3 text-gray-500">
+              <div className="flex justify-between flex-wrap gap-2">
 
-          <li>Data collection and cleaning</li>
-          <li>Data analysis workflows</li>
-          <li>Used Excel, SQL, Python, Tableau</li>
+                <h3 className="text-lg font-semibold">
+                  {exp.role}
+                </h3>
 
-        </ul>
+                <span className="text-sm text-slate-500">
+                  {exp.duration}
+                </span>
 
-      </div>
+              </div>
+
+              <p className="text-indigo-500 font-medium mt-1">
+                {exp.company}
+              </p>
+
+              <p className="text-slate-600 mt-3 text-sm leading-relaxed">
+                {exp.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-4">
+                {exp.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs bg-slate-100 px-2 py-1 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+        </AnimatedCard>
+
+      </Container>
 
     </section>
   );

@@ -1,50 +1,37 @@
-import { Card } from "@/components/ui/card";
+"use client";
 
-const projects = [
-  {
-    name: "CityZen",
-    desc: "AI powered city monitoring dashboard",
-    tech: "React, Flask, Firebase",
-    github: "https://github.com/theRahulkushwaha/CityZen-2.0"
-  },
-  {
-    name: "Echo Chat",
-    desc: "Real time chat application",
-    tech: "React Native, Node.js, Socket.io",
-    github: "https://github.com/theRahulkushwaha/Echoo"
-  }
-];
+import Container from "@/components/shared/Container";
+import SectionTitle from "@/components/shared/SectionTitle";
+import { projects } from "@/data/projects";
+import ProjectCard from "./ProjectCard";
+import AnimatedCard from "@/components/shared/AnimatedCard";
 
 export default function Projects() {
   return (
-    <section className="py-20 px-10">
+    <section className="py-24" id="projects">
+      <Container>
 
-      <h2 className="text-3xl font-bold mb-10">Projects</h2>
+        <SectionTitle
+          title="Projects"
+          subtitle="Some of the projects I've built."
+        />
 
-      <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
 
-        {projects.map((p) => (
-          <Card key={p.name} className="p-6">
+          {projects.map((project) => (
+            <AnimatedCard key={project.title}>
+              
+              {/* 🔥 THIS FIXES HEIGHT */}
+              <div className="h-full">
+                <ProjectCard project={project} />
+              </div>
 
-            <h3 className="text-xl font-semibold">{p.name}</h3>
+            </AnimatedCard>
+          ))}
 
-            <p className="text-gray-400 mt-2">{p.desc}</p>
+        </div>
 
-            <p className="text-sm mt-2">{p.tech}</p>
-
-            <a
-              href={p.github}
-              target="_blank"
-              className="text-blue-400 mt-3 block"
-            >
-              View Code
-            </a>
-
-          </Card>
-        ))}
-
-      </div>
-
+      </Container>
     </section>
   );
 }
