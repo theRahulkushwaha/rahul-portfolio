@@ -24,6 +24,18 @@ export const projects: Project[] = [
     readme: "https://github.com/theRahulkushwaha/Echoo/blob/main/README.md",
   },
   {
+    title: "Sprintly",
+    description:
+      "Sprintly is a full-stack Kanban-based project management tool designed for visual task tracking.",
+    tech: ["React.js"," JavaScript ","Node.js","Tailwind CSS", "MongoDB", "JWT"],
+    image: "/images/projects/floryn.png",
+    type: "Personal",
+    status: "In Progress",
+    github: "https://github.com/theRahulkushwaha/sprintly",
+    live: "https://sprintly-8idu.vercel.app/",
+    readme: "https://github.com/theRahulkushwaha/sprintly/blob/main/README.md",
+  },
+  {
     title: "Floryn Stayz",
     description:
       "Modern hotel booking website with responsive UI and optimized user experience.",
@@ -39,7 +51,7 @@ export const projects: Project[] = [
     title: "CityZen 2.0",
     description:
       "AI-powered smart city dashboard for real-time monitoring and analytics.",
-    tech: ["React", "Flask", "Firebase", "AI"],
+    tech: ["React.js", "Flask", "Firebase", "AI", "Roboflow"],
     image: "/images/projects/cityzen.png",
     type: "Personal",
     status: "Completed",
